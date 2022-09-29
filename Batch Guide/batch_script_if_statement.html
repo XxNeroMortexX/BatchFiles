@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Batch Script Tutorial</title>
+<meta charset="utf-8">
+<link id="style-switch" rel="stylesheet" href="css/style-min.css">
+<link rel="stylesheet" href="css/custom.css">
+<style>.navbar-expand-xl .navbar-brand .navbar-brand-item, .h-100px, ul.toc li.heading, .light-mode-item, .dark-mode-item, .back-top, a.demo, .home-intro-sub{background:#17c06a; color:#fff;}  ul.toc li.heading:hover{background:#17c06a;} .btn-grey-border{background:#17c06a; color:#fff; border:1px solid #17c06a;} .course-box{background:#17c06a;} 
+</style>
+</head>
+<body>
+
+
+
+<main class="bg-light pb-4">
+<div class="container-fluid mt-3 px-3 px-xl-3">
+<div class="row g-4">
+<div class="col-sm-12 col-md-4 col-xl-3 ps-0 pe-0 collapse tutorial-toc" id="tocCollapse">
+<div class="card card-body bg-light pt-0">
+<ul class="toc chapters">
+<li class="heading">Batch Script Tutorial</li>
+<li><a href="index-2.html">Batch Script - Home</a></li>
+<li><a href="batch_script_overview.html">Batch Script - Overview</a></li>
+<li><a href="batch_script_environment.html">Batch Script - Environment</a></li>
+<li><a href="batch_script_commands.html">Batch Script - Commands</a></li>
+<li><a href="batch_script_files.html">Batch Script - Files</a></li>
+<li><a href="batch_script_syntax.html">Batch Script - Syntax</a></li>
+<li><a href="batch_script_variables.html">Batch Script - Variables</a></li>
+<li><a href="batch_script_comments.html">Batch Script - Comments</a></li>
+<li><a href="batch_script_strings.html">Batch Script - Strings</a></li>
+<li><a href="batch_script_arrays.html">Batch Script - Arrays</a></li>
+<li><a href="batch_script_decision_making.html">Batch Script - Decision Making</a></li>
+<li><a href="batch_script_operators.html">Batch Script - Operators</a></li>
+<li><a href="batch_script_date_time.html">Batch Script - DATE &amp; TIME</a></li>
+<li><a href="batch_script_input_output.html">Batch Script - Input / Output</a></li>
+<li><a href="batch_script_return_code.html">Batch Script - Return Code</a></li>
+<li><a href="batch_script_functions.html">Batch Script - Functions</a></li>
+<li><a href="batch_script_process.html">Batch Script - Process</a></li>
+<li><a href="batch_script_aliases.html">Batch Script - Aliases</a></li>
+<li><a href="batch_script_devices.html">Batch Script - Devices</a></li>
+<li><a href="batch_script_registry.html">Batch Script - Registry</a></li>
+<li><a href="batch_script_network.html">Batch Script - Network</a></li>
+<li><a href="batch_script_printing.html">Batch Script - Printing</a></li>
+<li><a href="batch_script_debugging.html">Batch Script - Debugging</a></li>
+<li><a href="batch_script_logging.html">Batch Script - Logging</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Batch Script Resources</li>
+<li><a href="batch_script_quick_guide.html">Batch Script - Quick Guide</a></li>
+</ul>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+
+
+<!-- Tutorial Content Starts Here -->
+<div class="col-sm-12 col-md-8 col-xl-6 rounded-3 tutorial-content" id="mainContent">
+
+<h1>Batch Script - If Statement</h1>
+<hr />
+
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="batch_script_decision_making.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="batch_script_decision_making.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+
+<div class="clearer"></div>
+<p>The first decision-making statement is the ‘if’ statement. The general form of this statement in Batch Script is as follows &minus;</p>
+<pre class="result notranslate">
+if(condition) do_something
+</pre>
+<p>The general working of this statement is that first a condition is evaluated in the ‘if’ statement. If the condition is true, it then executes the statements. The following diagram shows the flow of the <b>if</b> statement.</p>
+<img src="images/if_statement.jpg" alt="If Statement" />
+<h2>Checking Variables</h2>
+<p>One of the common uses for the ‘if’ statement in Batch Script is for checking variables which are set in Batch Script itself. The evaluation of the ‘if’ statement can be done for both strings and numbers.</p>
+<h3>Checking Integer Variables</h3>
+<p>The following example shows how the ‘if’ statement can be used for numbers.</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate">
+&commat;echo off 
+SET /A a = 5 
+SET /A b = 10 
+SET /A c = %a% &plus; %b% 
+if %c%==15 echo "The value of variable c is 15" 
+if %c%==10 echo "The value of variable c is 10"
+</pre>
+<p>The key thing to note about the above program is &minus;</p>
+<ul class="list">
+<li><p>The first ‘if’ statement checks if the value of the variable c is 15. If so, then it echo’s a string to the command prompt.</p></li>
+<li><p>Since the condition in the statement - if %c% == 10 echo "The value of variable <b>c</b> is 10 evaluates to false, the echo part of the statement will not be executed.</p></li>
+</ul>
+<p><b>Output</b></p>
+<p>The above command produces the following output.</p>
+<pre class="result notranslate">
+15
+</pre>
+<h3>Checking String Variables</h3>
+<p>The following example shows how the ‘if’ statement can be used for strings.</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate">
+&commat;echo off 
+SET str1 = String1 
+SET str2 = String2 
+if %str1%==String1 echo "The value of variable String1" 
+if %str2%==String3 echo "The value of variable c is String3"
+</pre>
+<p>The key thing to note about the above program is &minus;</p>
+<ul class="list">
+<li><p>The first ‘if’ statement checks if the value of the variable str1 contains the string “String1”. If so, then it echo’s a string to the command prompt.</p></li>
+<li><p>Since the condition of the second ‘if’ statement evaluates to false, the echo part of the statement will not be executed.</p></li>
+</ul>
+<p><b>Output</b></p>
+<p>The above command produces the following output.</p>
+<pre class="result notranslate">
+"The value of variable String1"
+</pre>
+<p><b>Note</b> &minus; One key thing to note is that the evaluation in the ‘if’ statement is "case-sensitive”. The same program as above is modified a little as shown in the following example. In the first statement, we have changed the comparison criteria. Because of the different casing, the output of the following program would yield nothing.</p>
+<pre class="result notranslate">
+&commat;echo off 
+SET str1 = String1 
+SET str2 = String2 
+if %str1%==StrinG1 echo "The value of variable String1" 
+if %str2%==String3 echo "The value of variable c is String3"
+</pre>
+<h2>Checking Command Line Arguments</h2>
+<p>Another common use of the ‘if’ statement is used to check for the values of the command line arguments which are passed to the batch files. The following example shows how the ‘if’ statement can be used to check for the values of the command line arguments.</p>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate">
+&commat;echo off 
+echo %1 
+echo %2 
+echo %3 
+if %1%==1 echo "The value is 1" 
+if %2%==2 echo "The value is 2" 
+if %3%==3 echo "The value is 3"
+</pre>
+<p>The key thing to note about the above program is &minus;</p>
+<ul class="list">
+<li><p>The above program assumes that 3 command line arguments will be passed when the batch script is executed.</p></li>
+<li><p>A comparison is done for each command line argument against a value. If the criteria passes then a string is sent as the output.</p></li>
+</ul>
+<p><b>Output</b></p>
+<p>If the above code is saved in a file called test.bat and the program is executed as</p>
+<pre class="result notranslate">
+test.bat 1 2 3
+</pre>
+<p>Following will be the output of the above program.</p>
+<pre class="result notranslate">
+1 
+2 
+3 
+"The value is 1" 
+"The value is 2" 
+"The value is 3"
+</pre>
+<div class="parent-file">batch_script_decision_making.htm</div>
+<div class="d-flex justify-content-between border-bottom border-top py-2" id="bottom_navigation">
+<a href="batch_script_decision_making.html" class="pre-btn"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a id="print-page" href="#" class="pre-btn d-none d-sm-block"><i class="fal fa-print"></i> Print Page</a>
+<a href="batch_script_decision_making.html" class="nxt-btn">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+
+</body>
+
+<!-- Mirrored from www.tutorialspoint.com/batch_script/batch_script_if_statement.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Sep 2022 22:55:00 GMT -->
+</html>

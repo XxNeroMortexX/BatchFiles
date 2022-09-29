@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Batch Script Tutorial</title>
+<meta charset="utf-8">
+<link id="style-switch" rel="stylesheet" href="css/style-min.css">
+<link rel="stylesheet" href="css/custom.css">
+<style>.navbar-expand-xl .navbar-brand .navbar-brand-item, .h-100px, ul.toc li.heading, .light-mode-item, .dark-mode-item, .back-top, a.demo, .home-intro-sub{background:#17c06a; color:#fff;}  ul.toc li.heading:hover{background:#17c06a;} .btn-grey-border{background:#17c06a; color:#fff; border:1px solid #17c06a;} .course-box{background:#17c06a;} 
+</style>
+</head>
+<body>
+
+
+
+<main class="bg-light pb-4">
+<div class="container-fluid mt-3 px-3 px-xl-3">
+<div class="row g-4">
+<div class="col-sm-12 col-md-4 col-xl-3 ps-0 pe-0 collapse tutorial-toc" id="tocCollapse">
+<div class="card card-body bg-light pt-0">
+<ul class="toc chapters">
+<li class="heading">Batch Script Tutorial</li>
+<li><a href="index-2.html">Batch Script - Home</a></li>
+<li><a href="batch_script_overview.html">Batch Script - Overview</a></li>
+<li><a href="batch_script_environment.html">Batch Script - Environment</a></li>
+<li><a href="batch_script_commands.html">Batch Script - Commands</a></li>
+<li><a href="batch_script_files.html">Batch Script - Files</a></li>
+<li><a href="batch_script_syntax.html">Batch Script - Syntax</a></li>
+<li><a href="batch_script_variables.html">Batch Script - Variables</a></li>
+<li><a href="batch_script_comments.html">Batch Script - Comments</a></li>
+<li><a href="batch_script_strings.html">Batch Script - Strings</a></li>
+<li><a href="batch_script_arrays.html">Batch Script - Arrays</a></li>
+<li><a href="batch_script_decision_making.html">Batch Script - Decision Making</a></li>
+<li><a href="batch_script_operators.html">Batch Script - Operators</a></li>
+<li><a href="batch_script_date_time.html">Batch Script - DATE &amp; TIME</a></li>
+<li><a href="batch_script_input_output.html">Batch Script - Input / Output</a></li>
+<li><a href="batch_script_return_code.html">Batch Script - Return Code</a></li>
+<li><a href="batch_script_functions.html">Batch Script - Functions</a></li>
+<li><a href="batch_script_process.html">Batch Script - Process</a></li>
+<li><a href="batch_script_aliases.html">Batch Script - Aliases</a></li>
+<li><a href="batch_script_devices.html">Batch Script - Devices</a></li>
+<li><a href="batch_script_registry.html">Batch Script - Registry</a></li>
+<li><a href="batch_script_network.html">Batch Script - Network</a></li>
+<li><a href="batch_script_printing.html">Batch Script - Printing</a></li>
+<li><a href="batch_script_debugging.html">Batch Script - Debugging</a></li>
+<li><a href="batch_script_logging.html">Batch Script - Logging</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Batch Script Resources</li>
+<li><a href="batch_script_quick_guide.html">Batch Script - Quick Guide</a></li>
+</ul>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+
+
+<!-- Tutorial Content Starts Here -->
+<div class="col-sm-12 col-md-8 col-xl-6 rounded-3 tutorial-content" id="mainContent">
+
+<h1>Batch Script - Functions</h1>
+<hr />
+
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="batch_script_return_code.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="batch_script_process.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+
+<div class="clearer"></div>
+<p>A function is a set of statements organized together to perform a specific task. In batch scripts, a similar approach is adopted to group logical statements together to form a function.</p>
+<p>As like any other languages, functions in Batch Script follows the same procedure &minus;</p>
+<ul class="list">
+<li><p><b>Function Declaration</b> &minus; It tells the compiler about a function's name, return type, and parameters.</p></li>
+<li><p><b>Function Definition</b> &minus; It provides the actual body of the function.</p></li>
+</ul>
+<h2>Function Definition</h2>
+<p>In Batch Script, a function is defined by using the label statement. When a function is newly defined, it may take one or several values as input 'parameters' to the function, process the functions in the main body, and pass back the values to the functions as output 'return types'.</p>
+<p>Every function has a function name, which describes the task that the function performs. To use a function, you "call" that function with its name and pass its input values (known as arguments) that matches the types of the function's parameters.</p>
+<p>Following is the syntax of a simple function.</p>
+<pre class="result notranslate">
+:function_name 
+Do_something 
+EXIT /B 0
+</pre>
+<ul class="list">
+<li><p>The function_name is the name given to the function which should have some meaning to match what the function actually does.</p></li>
+<li><p>The EXIT statement is used to ensure that the function exits properly.</p></li>
+</ul>
+<p>Following is an example of a simple function.</p>
+<h3>Example</h3>
+<pre class="prettyprint notranslate">
+:Display 
+SET /A index=2 
+echo The value of index is %index% 
+EXIT /B 0
+</pre>
+<table class="table table-bordered">
+<tr>
+<th>S.No</th>
+<th style="text-align:center;">Functions &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><a href="batch_script_calling_function.html">Calling a Function</a>
+<p>A function is called in Batch Script by using the call command.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><a href="batch_script_functions_with_parameters.html">Functions with Parameters</a>
+<p>Functions can work with parameters by simply passing them when a call is made to the function.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><a href="batch_script_functions_with_return_values.html">Functions with Return Values</a>
+<p>Functions can work with return values by simply passing variables names</p>
+</td>
+</tr>
+<tr>
+<td class="ts">4</td>
+<td><a href="batch_script_local_variables_functions.html">Local Variables in Functions</a>
+<p>Local variables in functions can be used to avoid name conflicts and keep variable changes local to the function.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">5</td>
+<td><a href="batch_script_recursive_functions.html">Recursive Functions</a>
+<p>The ability to completely encapsulate the body of a function by keeping variable changes local to the function and invisible to the caller.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">6</td>
+<td><a href="batch_script_file_io.html">File I/O</a>
+<p>In Batch Script, it is possible to perform the normal file I/O operations that would be expected in any programming language.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">7</td>
+<td><a href="batch_script_creating_files.html">Creating Files</a>
+<p>The creation of a new file is done with the help of the redirection filter >. This filter can be used to redirect any output to a file.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">8</td>
+<td><a href="batch_script_writing_files.html">Writing to Files</a>
+<p>Content writing to files is also done with the help of the redirection filter >. This filter can be used to redirect any output to a file.</p>
+</td>
+</tr><tr>
+<td class="ts">9</td>
+<td><a href="batch_script_appending_files.html">Appending to Files</a>
+<p>Content writing to files is also done with the help of the double redirection filter &gt;&gt;. This filter can be used to append any output to a file.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">10</td>
+<td><a href="batch_script_reading_from_files.html">Reading from Files</a>
+<p>Reading of files in a batch script is done via using the FOR loop command to go through each line which is defined in the file that needs to be read.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">11</td>
+<td><a href="batch_script_deleting_files.html">Deleting Files</a>
+<p>For deleting files, Batch Script provides the DEL command.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">12</td>
+<td><a href="batch_script_renaming_files.html">Renaming Files</a>
+<p>For renaming files, Batch Script provides the REN or RENAME command.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">13</td>
+<td><a href="batch_script_moving_files.html">Moving Files</a>
+<p>For moving files, Batch Script provides the MOVE command.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">14</td>
+<td><a href="batch_script_files_pipes.html">Batch Files – Pipes</a>
+<p>The pipe operator (|) takes the output (by default, STDOUT) of one command and directs it into the input (by default, STDIN) of another command.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">15</td>
+<td><a href="batch_script_files_inputs.html">Batch Files – Inputs</a>
+<p>When a batch file is run, it gives you the option to pass in command line parameters which can then be read within the program for further processing.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">16</td>
+<td><a href="batch_script_using_shift_operator.html">Using the SHIFT Operator</a>
+<p>One of the limitations of command line arguments is that it can accept only arguments till %9. Let’s take an example of this limitation.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">17</td>
+<td><a href="batch_script_folders.html">Folders</a>
+<p>In Batch Script, it is possible to perform the normal folder based operations that would be expected in any programming language.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">18</td>
+<td><a href="batch_script_creating_folders.html">Creating Folders</a>
+<p>The creation of a folder is done with the assistance of the MD (Make directory) command.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">19</td>
+<td><a href="batch_script_listing_folder_contents.html">Listing Folder Contents</a>
+<p>The listing of folder contents can be done with the dir command. This command allows you to see the available files and directories in the current directory.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">20</td>
+<td><a href="batch_script_deleting_folders.html">Deleting Folders</a>
+<p>For deleting folders, Batch Scripting provides the DEL command.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">21</td>
+<td><a href="batch_script_renaming_folders.html">Renaming Folders</a>
+<p>For renaming folders, Batch Script provides the REN or RENAME command.</p>
+</td>
+</tr>
+<tr>
+<td class="ts">22</td>
+<td><a href="batch_script_moving_folders.html">Moving Folders</a>
+<p>For moving folders, Batch Script provides the MOVE command.</p>
+</td>
+</tr>
+</table>
+<div class="d-flex justify-content-between border-bottom border-top py-2" id="bottom_navigation">
+<a href="batch_script_return_code.html" class="pre-btn"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a id="print-page" href="#" class="pre-btn d-none d-sm-block"><i class="fal fa-print"></i> Print Page</a>
+<a href="batch_script_process.html" class="nxt-btn">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+
+</body>
+
+<!-- Mirrored from www.tutorialspoint.com/batch_script/batch_script_functions.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Sep 2022 22:54:48 GMT -->
+</html>

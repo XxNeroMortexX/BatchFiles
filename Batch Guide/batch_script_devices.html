@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Batch Script Tutorial</title>
+<meta charset="utf-8">
+<link id="style-switch" rel="stylesheet" href="css/style-min.css">
+<link rel="stylesheet" href="css/custom.css">
+<style>.navbar-expand-xl .navbar-brand .navbar-brand-item, .h-100px, ul.toc li.heading, .light-mode-item, .dark-mode-item, .back-top, a.demo, .home-intro-sub{background:#17c06a; color:#fff;}  ul.toc li.heading:hover{background:#17c06a;} .btn-grey-border{background:#17c06a; color:#fff; border:1px solid #17c06a;} .course-box{background:#17c06a;} 
+</style>
+</head>
+<body>
+
+
+
+<main class="bg-light pb-4">
+<div class="container-fluid mt-3 px-3 px-xl-3">
+<div class="row g-4">
+<div class="col-sm-12 col-md-4 col-xl-3 ps-0 pe-0 collapse tutorial-toc" id="tocCollapse">
+<div class="card card-body bg-light pt-0">
+<ul class="toc chapters">
+<li class="heading">Batch Script Tutorial</li>
+<li><a href="index-2.html">Batch Script - Home</a></li>
+<li><a href="batch_script_overview.html">Batch Script - Overview</a></li>
+<li><a href="batch_script_environment.html">Batch Script - Environment</a></li>
+<li><a href="batch_script_commands.html">Batch Script - Commands</a></li>
+<li><a href="batch_script_files.html">Batch Script - Files</a></li>
+<li><a href="batch_script_syntax.html">Batch Script - Syntax</a></li>
+<li><a href="batch_script_variables.html">Batch Script - Variables</a></li>
+<li><a href="batch_script_comments.html">Batch Script - Comments</a></li>
+<li><a href="batch_script_strings.html">Batch Script - Strings</a></li>
+<li><a href="batch_script_arrays.html">Batch Script - Arrays</a></li>
+<li><a href="batch_script_decision_making.html">Batch Script - Decision Making</a></li>
+<li><a href="batch_script_operators.html">Batch Script - Operators</a></li>
+<li><a href="batch_script_date_time.html">Batch Script - DATE &amp; TIME</a></li>
+<li><a href="batch_script_input_output.html">Batch Script - Input / Output</a></li>
+<li><a href="batch_script_return_code.html">Batch Script - Return Code</a></li>
+<li><a href="batch_script_functions.html">Batch Script - Functions</a></li>
+<li><a href="batch_script_process.html">Batch Script - Process</a></li>
+<li><a href="batch_script_aliases.html">Batch Script - Aliases</a></li>
+<li><a href="batch_script_devices.html">Batch Script - Devices</a></li>
+<li><a href="batch_script_registry.html">Batch Script - Registry</a></li>
+<li><a href="batch_script_network.html">Batch Script - Network</a></li>
+<li><a href="batch_script_printing.html">Batch Script - Printing</a></li>
+<li><a href="batch_script_debugging.html">Batch Script - Debugging</a></li>
+<li><a href="batch_script_logging.html">Batch Script - Logging</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Batch Script Resources</li>
+<li><a href="batch_script_quick_guide.html">Batch Script - Quick Guide</a></li>
+</ul>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+
+
+<!-- Tutorial Content Starts Here -->
+<div class="col-sm-12 col-md-8 col-xl-6 rounded-3 tutorial-content" id="mainContent">
+
+<h1>Batch Script - Devices</h1>
+<hr />
+
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="batch_script_aliases.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="batch_script_registry.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+
+<div class="clearer"></div>
+<p>Windows now has an improved library which can be used in Batch Script for working with devices attached to the system. This is known as the device console – DevCon.exe.</p>
+<p>Windows driver developers and testers can use DevCon to verify that a driver is installed and configured correctly, including the proper INF files, driver stack, driver files, and driver package. You can also use the DevCon commands (enable, disable, install, start, stop, and continue) in scripts to test the driver. <b>DevCon</b> is a command-line tool that performs device management functions on local computers and remote computers.</p>
+<p>Display driver and device info DevCon can display the following properties of drivers and devices on local computers, and remote computers (running Windows XP and earlier) &minus;</p>
+<ul class="list">
+<li><p>Hardware IDs, compatible IDs, and device instance IDs. These identifiers are described in detail in device identification strings.</p></li>
+<li><p>Device setup classes.</p></li>
+<li><p>The devices in a device setup class.</p></li>
+<li><p>INF files and device driver files.</p></li>
+<li><p>Details of driver packages.</p></li>
+<li><p>Hardware resources.</p></li>
+<li><p>Device status.</p></li>
+<li><p>Expected driver stack.</p></li>
+<li><p>Third-party driver packages in the driver store.</p></li>
+<li><p>Search for devices DevCon can search for installed and uninstalled devices on a local or remote computer by hardware ID, device instance ID, or device setup class.</p></li>
+<li><p>Change device settings DevCon can change the status or configuration of Plug and Play (PnP) devices on the local computer in the following ways &minus;</p>
+<ul class="list">
+<li><p>Enable a device.</p></li>
+<li><p>Disable a device.</p></li>
+<li><p>Update drivers (interactive and non-interactive).</p></li>
+<li><p>Install a device (create a devnode and install software).</p></li>
+<li><p>Remove a device from the device tree and delete its device stack.</p></li>
+<li><p>Rescan for Plug and Play devices.</p></li>
+<li><p>Add, delete, and reorder the hardware IDs of root-enumerated devices.</p></li>
+<li><p>Change the upper and lower filter drivers for a device setup class.</p></li>
+<li><p>Add and delete third-party driver packages from the driver store.</p></li>
+</ul>
+</li>
+</ul>
+<p>DevCon (DevCon.exe) is included when you install the WDK, Visual Studio, and the Windows SDK for desktop apps. DevCon.exe kit is available in the following locations when installed.</p>
+<pre class="result notranslate">
+%WindowsSdkDir%\tools\x64\devcon.exe
+%WindowsSdkDir%\tools\x86\devcon.exe
+%WindowsSdkDir%\tools\arm\devcon.exe
+</pre>
+<h3>Syntax</h3>
+<pre class="result notranslate">
+devcon [/m:\\computer] [/r] command [arguments]
+</pre>
+<p>wherein</p>
+<ul class="list">
+<li><p><b>/m:\\computer</b> &minus; Runs the command on the specified remote computer. The backslashes are required.</p></li>
+<li><p><b>/r</b> &minus; Conditional reboot. Reboots the system after completing an operation only if a reboot is required to make a change effective.</p></li>
+<li><p><b>command</b> &minus; Specifies a DevCon command.</p></li>
+<li><p>To list and display information about devices on the computer, use the following commands &minus;</p>
+<ul class="list">
+<li><p>DevCon HwIDs</p></li>
+<li><p>DevCon Classes</p></li>
+<li><p>DevCon ListClass</p></li>
+<li><p>DevCon DriverFiles</p></li>
+<li><p>DevCon DriverNodes</p></li>
+<li><p>DevCon Resources</p></li>
+<li><p>DevCon Stack</p></li>
+<li><p>DevCon Status</p></li>
+<li><p>DevCon Dp_enum</p></li>
+</ul>
+</li>
+<li><p>To search for information about devices on the computer, use the following commands &minus;</p>
+<ul class="list">
+<li><p>DevCon Find</p></li>
+<li><p>DevCon FindAll</p></li>
+</ul>
+</li>
+<li><p>To manipulate the device or change its configuration, use the following commands &minus;</p>
+<ul class="list">
+<li><p>DevCon Enable</p></li>
+<li><p>DevCon Disable</p></li>
+<li><p>DevCon Update</p></li>
+<li><p>DevCon UpdateNI</p></li>
+<li><p>DevCon Install</p></li>
+<li><p>DevCon Remove</p></li>
+<li><p>DevCon Rescan</p></li>
+<li><p>DevCon Restart</p></li>
+<li><p>DevCon Reboot</p></li>
+<li><p>DevCon SetHwID</p></li>
+<li><p>DevCon ClassFilter</p></li>
+<li><p>DevCon Dp_add</p></li>
+<li><p>DevCon Dp_delete</p></li>
+</ul>
+</li>
+</ul>
+<h3>Examples</h3>
+<p>Following are some examples on how the DevCon command is used.</p>
+<pre class="result notranslate">
+List all driver files
+</pre>
+<p>The following command uses the DevCon DriverFiles operation to list the file names of drivers that devices on the system use. The command uses the wildcard character (*) to indicate all devices on the system. Because the output is extensive, the command uses the redirection character (&gt;) to redirect the output to a reference file, driverfiles.txt.</p>
+<pre class="result notranslate">
+devcon driverfiles * &gt; driverfiles.txt
+</pre>
+<p>The following command uses the DevCon status operation to find the status of all devices on the local computer. It then saves the status in the status.txt file for logging or later review. The command uses the wildcard character (*) to represent all devices and the redirection character (&gt;) to redirect the output to the status.txt file.</p>
+<pre class="result notranslate">
+devcon status * &gt; status.txt
+</pre>
+<p>The following command enables all printer devices on the computer by specifying the Printer setup class in a DevCon Enable command. The command includes the /r parameter, which reboots the system if it is necessary to make the enabling effective.</p>
+<pre class="result notranslate">
+devcon /r enable = Printer
+</pre>
+<p>The following command uses the DevCon Install operation to install a keyboard device on the local computer. The command includes the full path to the INF file for the device (keyboard.inf) and a hardware ID (*PNP030b).</p>
+<pre class="result notranslate">
+devcon /r install c:\windows\inf\keyboard.inf *PNP030b
+</pre>
+<p>The following command will scan the computer for new devices.</p>
+<pre class="result notranslate">
+devcon scan
+</pre>
+<p>The following command will rescan the computer for new devices.</p>
+<pre class="result notranslate">
+devcon rescan
+</pre>
+<div class="d-flex justify-content-between border-bottom border-top py-2" id="bottom_navigation">
+<a href="batch_script_aliases.html" class="pre-btn"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a id="print-page" href="#" class="pre-btn d-none d-sm-block"><i class="fal fa-print"></i> Print Page</a>
+<a href="batch_script_registry.html" class="nxt-btn">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+
+</body>
+
+<!-- Mirrored from www.tutorialspoint.com/batch_script/batch_script_devices.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Sep 2022 22:54:49 GMT -->
+</html>

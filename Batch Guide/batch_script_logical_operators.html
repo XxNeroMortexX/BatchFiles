@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Batch Script Tutorial</title>
+<meta charset="utf-8">
+<link id="style-switch" rel="stylesheet" href="css/style-min.css">
+<link rel="stylesheet" href="css/custom.css">
+<style>.navbar-expand-xl .navbar-brand .navbar-brand-item, .h-100px, ul.toc li.heading, .light-mode-item, .dark-mode-item, .back-top, a.demo, .home-intro-sub{background:#17c06a; color:#fff;}  ul.toc li.heading:hover{background:#17c06a;} .btn-grey-border{background:#17c06a; color:#fff; border:1px solid #17c06a;} .course-box{background:#17c06a;} 
+</style>
+</head>
+<body>
+
+
+
+<main class="bg-light pb-4">
+<div class="container-fluid mt-3 px-3 px-xl-3">
+<div class="row g-4">
+<div class="col-sm-12 col-md-4 col-xl-3 ps-0 pe-0 collapse tutorial-toc" id="tocCollapse">
+<div class="card card-body bg-light pt-0">
+<ul class="toc chapters">
+<li class="heading">Batch Script Tutorial</li>
+<li><a href="index-2.html">Batch Script - Home</a></li>
+<li><a href="batch_script_overview.html">Batch Script - Overview</a></li>
+<li><a href="batch_script_environment.html">Batch Script - Environment</a></li>
+<li><a href="batch_script_commands.html">Batch Script - Commands</a></li>
+<li><a href="batch_script_files.html">Batch Script - Files</a></li>
+<li><a href="batch_script_syntax.html">Batch Script - Syntax</a></li>
+<li><a href="batch_script_variables.html">Batch Script - Variables</a></li>
+<li><a href="batch_script_comments.html">Batch Script - Comments</a></li>
+<li><a href="batch_script_strings.html">Batch Script - Strings</a></li>
+<li><a href="batch_script_arrays.html">Batch Script - Arrays</a></li>
+<li><a href="batch_script_decision_making.html">Batch Script - Decision Making</a></li>
+<li><a href="batch_script_operators.html">Batch Script - Operators</a></li>
+<li><a href="batch_script_date_time.html">Batch Script - DATE &amp; TIME</a></li>
+<li><a href="batch_script_input_output.html">Batch Script - Input / Output</a></li>
+<li><a href="batch_script_return_code.html">Batch Script - Return Code</a></li>
+<li><a href="batch_script_functions.html">Batch Script - Functions</a></li>
+<li><a href="batch_script_process.html">Batch Script - Process</a></li>
+<li><a href="batch_script_aliases.html">Batch Script - Aliases</a></li>
+<li><a href="batch_script_devices.html">Batch Script - Devices</a></li>
+<li><a href="batch_script_registry.html">Batch Script - Registry</a></li>
+<li><a href="batch_script_network.html">Batch Script - Network</a></li>
+<li><a href="batch_script_printing.html">Batch Script - Printing</a></li>
+<li><a href="batch_script_debugging.html">Batch Script - Debugging</a></li>
+<li><a href="batch_script_logging.html">Batch Script - Logging</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Batch Script Resources</li>
+<li><a href="batch_script_quick_guide.html">Batch Script - Quick Guide</a></li>
+</ul>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+
+
+<!-- Tutorial Content Starts Here -->
+<div class="col-sm-12 col-md-8 col-xl-6 rounded-3 tutorial-content" id="mainContent">
+
+<h1>Batch Script - Logical Operators</h1>
+<hr />
+
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="batch_script_operators.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="batch_script_operators.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+
+<div class="clearer"></div>
+<p>Logical operators are used to evaluate Boolean expressions. Following are the logical operators available.</p>
+<p>The batch language is equipped with a full set of Boolean logic operators like AND, OR, XOR, but only for binary numbers. Neither are there any values for TRUE or FALSE. The only logical operator available for conditions is the NOT operator.</p>
+<p>The easiest way to implement the AND/OR operator for non-binary numbers is to use the nested IF condition. The following example shows how this can be implemented.</p>
+<h2>Example</h2>
+<pre class="prettyprint notranslate">
+&commat;echo off
+SET /A a = 5
+SET /A b = 10
+IF %a% LSS 10 (IF %b% GTR 0 (ECHO %a% is less than 10 AND %b% is greater than 0))
+</pre>
+<h2>Output</h2>
+<p>The above command produces the following output.</p>
+<pre class="result notranslate">
+5 is less than 10 AND 10 is greater than 0
+</pre>
+<p>Following is an example of the AND operation that can be implemented using the IF statement.</p>
+<h2>Example</h2>
+<pre class="prettyprint notranslate">
+&commat;echo off
+SET /A a = 5
+SET /A b = 10
+
+IF %a% GEQ 10 (
+   IF %b% LEQ 0 (
+      ECHO %a% is NOT less than 10 OR %b% is NOT greater than 0
+   ) ELSE (
+      ECHO %a% is less than 10 OR %b% is greater than 0
+   )
+) ELSE (
+   ECHO %a% is less than 10 OR %b% is greater than 0
+)
+</pre>
+<h2>Output</h2>
+<p>The above command produces the following output.</p>
+<pre class="result notranslate">
+5 is less than 10 AND 10 is greater than 0
+</pre>
+<p>Following is an example of how the NOT operator can be used.</p>
+<h2>Example</h2>
+<pre class="prettyprint notranslate">
+&commat;echo off
+SET /A a = 5
+IF NOT %a%==6 echo "A is not equal to 6"
+</pre>
+<h2>Output</h2>
+<p>The above command produces the following output.</p>
+<pre class="result notranslate">
+"A is equal to 5"
+</pre>
+<div class="parent-file">batch_script_operators.htm</div>
+<div class="d-flex justify-content-between border-bottom border-top py-2" id="bottom_navigation">
+<a href="batch_script_operators.html" class="pre-btn"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a id="print-page" href="#" class="pre-btn d-none d-sm-block"><i class="fal fa-print"></i> Print Page</a>
+<a href="batch_script_operators.html" class="nxt-btn">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+
+</body>
+
+<!-- Mirrored from www.tutorialspoint.com/batch_script/batch_script_logical_operators.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Sep 2022 22:55:00 GMT -->
+</html>

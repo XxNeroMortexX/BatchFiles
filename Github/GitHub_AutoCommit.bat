@@ -35,7 +35,7 @@ SET Files_Debug=1
 SET Recheck_Delay=10
 
 :~[ Total Amount of Account INFO added Below. (Will Loop 1-Total_Account)
-SET Total_Account=5
+SET Total_Account=1
 
 
 ::~

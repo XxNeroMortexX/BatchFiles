@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Batch Script Tutorial</title>
+<meta charset="utf-8">
+<link id="style-switch" rel="stylesheet" href="css/style-min.css">
+<link rel="stylesheet" href="css/custom.css">
+<style>.navbar-expand-xl .navbar-brand .navbar-brand-item, .h-100px, ul.toc li.heading, .light-mode-item, .dark-mode-item, .back-top, a.demo, .home-intro-sub{background:#17c06a; color:#fff;}  ul.toc li.heading:hover{background:#17c06a;} .btn-grey-border{background:#17c06a; color:#fff; border:1px solid #17c06a;} .course-box{background:#17c06a;} 
+</style>
+</head>
+<body>
+
+
+
+<main class="bg-light pb-4">
+<div class="container-fluid mt-3 px-3 px-xl-3">
+<div class="row g-4">
+<div class="col-sm-12 col-md-4 col-xl-3 ps-0 pe-0 collapse tutorial-toc" id="tocCollapse">
+<div class="card card-body bg-light pt-0">
+<ul class="toc chapters">
+<li class="heading">Batch Script Tutorial</li>
+<li><a href="index-2.html">Batch Script - Home</a></li>
+<li><a href="batch_script_overview.html">Batch Script - Overview</a></li>
+<li><a href="batch_script_environment.html">Batch Script - Environment</a></li>
+<li><a href="batch_script_commands.html">Batch Script - Commands</a></li>
+<li><a href="batch_script_files.html">Batch Script - Files</a></li>
+<li><a href="batch_script_syntax.html">Batch Script - Syntax</a></li>
+<li><a href="batch_script_variables.html">Batch Script - Variables</a></li>
+<li><a href="batch_script_comments.html">Batch Script - Comments</a></li>
+<li><a href="batch_script_strings.html">Batch Script - Strings</a></li>
+<li><a href="batch_script_arrays.html">Batch Script - Arrays</a></li>
+<li><a href="batch_script_decision_making.html">Batch Script - Decision Making</a></li>
+<li><a href="batch_script_operators.html">Batch Script - Operators</a></li>
+<li><a href="batch_script_date_time.html">Batch Script - DATE &amp; TIME</a></li>
+<li><a href="batch_script_input_output.html">Batch Script - Input / Output</a></li>
+<li><a href="batch_script_return_code.html">Batch Script - Return Code</a></li>
+<li><a href="batch_script_functions.html">Batch Script - Functions</a></li>
+<li><a href="batch_script_process.html">Batch Script - Process</a></li>
+<li><a href="batch_script_aliases.html">Batch Script - Aliases</a></li>
+<li><a href="batch_script_devices.html">Batch Script - Devices</a></li>
+<li><a href="batch_script_registry.html">Batch Script - Registry</a></li>
+<li><a href="batch_script_network.html">Batch Script - Network</a></li>
+<li><a href="batch_script_printing.html">Batch Script - Printing</a></li>
+<li><a href="batch_script_debugging.html">Batch Script - Debugging</a></li>
+<li><a href="batch_script_logging.html">Batch Script - Logging</a></li>
+</ul>
+<ul class="toc chapters">
+<li class="heading">Batch Script Resources</li>
+<li><a href="batch_script_quick_guide.html">Batch Script - Quick Guide</a></li>
+</ul>
+</div>
+</div>
+<!-- Tutorial ToC Ends Here -->
+
+
+<!-- Tutorial Content Starts Here -->
+<div class="col-sm-12 col-md-8 col-xl-6 rounded-3 tutorial-content" id="mainContent">
+
+<h1>Batch Script - Variables</h1>
+<hr />
+
+<br>
+<div class="mui-container-fluid button-borders">
+<div class="pre-btn">
+<a href="batch_script_syntax.html"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="batch_script_comments.html">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+</div>
+
+<div class="clearer"></div>
+<p>There are two types of variables in batch files. One is for parameters which can be passed when the batch file is called and the other is done via the set command.</p>
+<h2>Command Line Arguments</h2>
+<p>Batch scripts support the concept of command line arguments wherein arguments can be passed to the batch file when invoked. The arguments can be called from the batch files through the variables %1, %2, %3, and so on.</p>
+<p>The following example shows a batch file which accepts 3 command line arguments and echo’s them to the command line screen.</p>
+<pre class="prettyprint notranslate">
+&commat;echo off 
+echo %1 
+echo %2 
+echo %3
+</pre>
+<p>If the above batch script is stored in a file called test.bat and we were to run the batch as</p>
+<pre class="result notranslate">
+Test.bat 1 2 3
+</pre>
+<p>Following is a screenshot of how this would look in the command prompt when the batch file is executed.</p>
+<img src="images/command_line_arguments.jpg" alt="Command Line Arguments" />
+<p>The above command produces the following output.</p>
+<pre class="result notranslate">
+1 
+2 
+3
+</pre>
+<p>If we were to run the batch as</p>
+<pre class="result notranslate">
+Example 1 2 3 4
+</pre>
+<p>The output would still remain the same as above. However, the fourth parameter would be ignored.</p>
+<h2>Set Command</h2>
+<p>The other way in which variables can be initialized is via the ‘set’ command. Following is the syntax of the set command.</p>
+<h3>Syntax</h3>
+<pre class="result notranslate">
+set /A variable-name=value
+</pre>
+<p>where,</p>
+<ul class="list">
+<li><p><b>variable-name</b> is the name of the variable you want to set.</p></li>
+<li><p><b>value</b> is the value which needs to be set against the variable.</p></li>
+<li><p><b>/A –</b> This switch is used if the value needs to be numeric in nature.</p></li>
+</ul>
+<p>The following example shows a simple way the set command can be used.</p>
+<h3>Example</h3>
+<pre class="prettyprint notranslate">
+&commat;echo off 
+set message=Hello World 
+echo %message%
+</pre>
+<ul class="list">
+<li><p>In the above code snippet, a variable called message is defined and set with the value of "Hello World".</p></li>
+<li><p>To display the value of the variable, note that the variable needs to be enclosed in the % sign.</p></li>
+</ul>
+<h3>Output</h3>
+<p>The above command produces the following output.</p>
+<pre class="result notranslate">
+Hello World
+</pre>
+<h2>Working with Numeric Values</h2>
+<p>In batch script, it is also possible to define a variable to hold a numeric value. This can be done by using the /A switch.</p>
+<p>The following code shows a simple way in which numeric values can be set with the /A switch.</p>
+<pre class="prettyprint notranslate">
+&commat;echo off 
+SET /A a = 5 
+SET /A b = 10 
+SET /A c = %a% &plus; %b% 
+echo %c%
+</pre>
+<ul class="list">
+<li><p>We are first setting the value of 2 variables, a and b to 5 and 10 respectively.</p></li>
+<li><p>We are adding those values and storing in the variable c.</p></li>
+<li><p>Finally, we are displaying the value of the variable c.</p></li>
+</ul>
+<p>The output of the above program would be 15.</p>
+<p>All of the arithmetic operators work in batch files. The following example shows arithmetic operators can be used in batch files.</p>
+<pre class="prettyprint notranslate">
+&commat;echo off 
+SET /A a = 5 
+SET /A b = 10 
+SET /A c = %a% &plus; %b% 
+echo %c% 
+SET /A c = %a% - %b% 
+echo %c% 
+SET /A c = %b% / %a% 
+echo %c% 
+SET /A c = %b% * %a% 
+echo %c%
+</pre>
+<p>The above command produces the following output.</p>
+<pre class="result notranslate">
+15 
+-5 
+2 
+50
+</pre>
+<h2>Local vs Global Variables</h2>
+<p>In any programming language, there is an option to mark variables as having some sort of scope, i.e. the section of code on which they can be accessed. Normally, variable having a global scope can be accessed anywhere from a program whereas local scoped variables have a defined boundary in which they can be accessed.</p>
+<p>DOS scripting also has a definition for locally and globally scoped variables. By default, variables are global to your entire command prompt session. Call the SETLOCAL command to make variables local to the scope of your script. After calling SETLOCAL, any variable assignments revert upon calling ENDLOCAL, calling EXIT, or when execution reaches the end of file (EOF) in your script. The following example shows the difference when local and global variables are set in the script.</p>
+<h3>Example</h3>
+<pre class="prettyprint notranslate">
+&commat;echo off 
+set globalvar = 5
+SETLOCAL
+set var = 13145
+set /A var = %var% + 5
+echo %var%
+echo %globalvar%
+ENDLOCAL
+</pre>
+<p>Few key things to note about the above program.</p>
+<ul class="list">
+<li><p>The ‘globalvar’ is defined with a global scope and is available throughout the entire script.</p></li>
+<li><p>The ‘var‘ variable is defined in a local scope because it is enclosed between a ‘SETLOCAL’ and ‘ENDLOCAL’ block. Hence, this variable will be destroyed as soon the ‘ENDLOCAL’ statement is executed.</p></li>
+</ul>
+<h3>Output</h3>
+<p>The above command produces the following output.</p>
+<pre class="result notranslate">
+13150
+5
+</pre>
+<p>You will notice that the command echo %var% will not yield anything because after the ENDLOCAL statement, the ‘var’ variable will no longer exist.</p>
+<h2>Working with Environment Variables</h2>
+<p>If you have variables that would be used across batch files, then it is always preferable to use environment variables. Once the environment variable is defined, it can be accessed via the % sign. The following example shows how to see the JAVA_HOME defined on a system. The JAVA_HOME variable is a key component that is normally used by a wide variety of applications.</p>
+<pre class="prettyprint notranslate">
+&commat;echo off 
+echo %JAVA_HOME%
+</pre>
+<p>The output would show the JAVA_HOME directory which would depend from system to system. Following is an example of an output.</p>
+<pre class="result notranslate">
+C:\Atlassian\Bitbucket\4.0.1\jre
+</pre>
+<div class="d-flex justify-content-between border-bottom border-top py-2" id="bottom_navigation">
+<a href="batch_script_syntax.html" class="pre-btn"><i class="fal fa-chevron-circle-left"></i> Previous Page</a>
+<a id="print-page" href="#" class="pre-btn d-none d-sm-block"><i class="fal fa-print"></i> Print Page</a>
+<a href="batch_script_comments.html" class="nxt-btn">Next Page <i class="fal fa-chevron-circle-right"></i>&nbsp;</a>
+</div>
+
+</body>
+
+<!-- Mirrored from www.tutorialspoint.com/batch_script/batch_script_variables.htm by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Sep 2022 22:54:32 GMT -->
+</html>
